@@ -27,7 +27,9 @@ void BufferHistory::clear_history() {
 
 void BufferHistory::print_history() {
     for (int i = 0; i < this->history.size(); i++) {
-        std::cout << this->history[i] << std::endl;
+        if(this->history[i] != nullptr) {
+            std::cout << this->history[i] << std::endl;
+        }
     }
 }
 
